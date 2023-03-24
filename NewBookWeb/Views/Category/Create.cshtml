@@ -1,0 +1,56 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <div class="row pt-10">
+        <h1 style="width: 100%;text-align: center;padding-bottom : 20px">
+            Create Category
+        </h1>
+    </div>
+
+        <form method="post">
+            <div class="row">
+                
+                <div class="col-1"></div>
+
+                <div class="col-4 text-center">
+                <label asp-for="Name" class="lead" style="padding-left:3px">Enter Name</label>
+                <br/>
+                <input asp-for="Name" class="form-control" />
+                <br/>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            
+            <div class="col-2"></div>
+
+            <div class="col-4 text-center">
+                <label asp-for="DisplayOrder" class="lead" style="padding-left:3px">Enter Order</label>
+                <br />
+                <input asp-for="DisplayOrder" class="form-control"/>
+                <br />
+                <span asp-validation-for="DisplayOrder" class="text-danger"></span>
+            </div>
+            </div>
+            @*<div asp-validation-summary="All" style="padding-top:20px" class="text-warning"></div>*@
+
+        <div style="width: 100%;text-align: center;padding-top: 40px">
+
+            <button type="submit" class="btn btn-success"> <i class="bi bi-arrow-bar-up" style="padding-right: 10px; width : 150px"></i>Submit</button>
+
+                <a class="btn btn-secondary" asp-controller="Category" asp-action="Index"> <i class="bi bi-x" style="padding-right: 10px; width : 150px"></i>Cancel</a>
+
+            </div>
+            
+        </form>
+</div>
+
+@section Scripts{
+    @{
+        <parital name="_ValidationScriptsPartial" />
+
+    }
+}
+
+
