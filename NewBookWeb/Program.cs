@@ -1,3 +1,4 @@
+using AspNetCoreHero.ToastNotification;
 using Microsoft.EntityFrameworkCore;
 using NewBookWeb.Data;
 
@@ -8,6 +9,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection")
     ));
+builder.Services.AddNotyf(config => { config.DurationInSeconds = 5; config.IsDismissable = true; config.Position = NotyfPosition.BottomRight; });
 
 var app = builder.Build();
 
