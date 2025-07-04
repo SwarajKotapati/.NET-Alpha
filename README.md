@@ -34,6 +34,9 @@ Blazor Alpha is a lightweight .NET Core, Blazor, Azure and SQL Server based MVC 
 - `Program.cs`: Registers services, including EF Core and Notyf
 
 ## Getting Started
+
+![image](https://github.com/user-attachments/assets/850a65c5-f14f-495f-a212-bd810a0fc38e)
+
 ![image](https://github.com/user-attachments/assets/22e23311-f822-435e-8ea8-a27db2d08d2c)
 
 
